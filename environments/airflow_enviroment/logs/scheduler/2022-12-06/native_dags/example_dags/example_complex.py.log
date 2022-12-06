@@ -587,3 +587,42 @@
 [2022-12-06T06:11:15.497+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:15.497+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-06T06:11:15.546+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:15.546+0000] {dag.py:3427} INFO - Setting next_dagrun for example_complex to None, run_after=None
 [2022-12-06T06:11:15.582+0000] {processor.py:175} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py took 0.303 seconds
+[2022-12-06T06:11:48.076+0000] {processor.py:153} INFO - Started process (PID=2613) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:11:48.078+0000] {processor.py:743} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2022-12-06T06:11:48.094+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.089+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:11:48.165+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.165+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex
+[2022-12-06T06:11:48.167+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.166+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex
+[2022-12-06T06:11:48.168+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.168+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex
+[2022-12-06T06:11:48.169+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.169+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex
+[2022-12-06T06:11:48.171+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.170+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex
+[2022-12-06T06:11:48.172+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.172+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex
+[2022-12-06T06:11:48.195+0000] {processor.py:753} INFO - DAG(s) dict_keys(['example_complex']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:11:48.324+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.324+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-06T06:11:48.367+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:11:48.367+0000] {dag.py:3427} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2022-12-06T06:11:48.401+0000] {processor.py:175} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py took 0.398 seconds
+[2022-12-06T06:12:27.839+0000] {processor.py:153} INFO - Started process (PID=2682) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:12:27.845+0000] {processor.py:743} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2022-12-06T06:12:27.853+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:27.852+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:12:28.017+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.015+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex
+[2022-12-06T06:12:28.019+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.019+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex
+[2022-12-06T06:12:28.021+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.021+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex
+[2022-12-06T06:12:28.022+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.022+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex
+[2022-12-06T06:12:28.024+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.024+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex
+[2022-12-06T06:12:28.026+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.026+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex
+[2022-12-06T06:12:28.091+0000] {processor.py:753} INFO - DAG(s) dict_keys(['example_complex']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:12:28.444+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.442+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-06T06:12:28.512+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:12:28.511+0000] {dag.py:3427} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2022-12-06T06:12:30.198+0000] {processor.py:175} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py took 2.371 seconds
+[2022-12-06T06:13:02.906+0000] {processor.py:153} INFO - Started process (PID=2755) to work on /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:13:02.915+0000] {processor.py:743} INFO - Processing file /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2022-12-06T06:13:02.920+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:02.920+0000] {dagbag.py:538} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:13:03.022+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.018+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_group>, delete_entry_group already registered for DAG: example_complex
+[2022-12-06T06:13:03.032+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.031+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry_group>, create_entry_group already registered for DAG: example_complex
+[2022-12-06T06:13:03.056+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.041+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_entry_gcs>, delete_entry already registered for DAG: example_complex
+[2022-12-06T06:13:03.070+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.066+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_entry>, create_entry_gcs already registered for DAG: example_complex
+[2022-12-06T06:13:03.072+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.072+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): create_tag>, delete_tag already registered for DAG: example_complex
+[2022-12-06T06:13:03.074+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:03.074+0000] {taskmixin.py:205} WARNING - Dependency <Task(BashOperator): delete_tag>, create_tag already registered for DAG: example_complex
+[2022-12-06T06:13:04.020+0000] {processor.py:753} INFO - DAG(s) dict_keys(['example_complex']) retrieved from /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py
+[2022-12-06T06:13:04.234+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:04.234+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-06T06:13:04.308+0000] {logging_mixin.py:137} INFO - [2022-12-06T06:13:04.308+0000] {dag.py:3427} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2022-12-06T06:13:04.458+0000] {processor.py:175} INFO - Processing /home/airflow/.local/lib/python3.7/site-packages/airflow/example_dags/example_complex.py took 1.571 seconds
