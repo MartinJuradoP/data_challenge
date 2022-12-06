@@ -1,0 +1,7 @@
+# Running Postgres Container
+docker run --name postgresql -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=passw0rd -p 5433:5432 -v /Users/martinjurado/Documents/prj/data_challenge/environments/volume/data_db:/var/lib/postgresql/data -d postgres
+#Runging Airflow Environment
+docker compose up airflow-init
+docker-compose up
+#Cleaning
+docker-compose down --volumes --rmi all
