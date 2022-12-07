@@ -13,10 +13,6 @@ from dotenv import load_dotenv
 
 PATH_ENV= '/Users/martinjurado/Documents/prj/data_challenge/01_csv_db/.env_db'
 load_dotenv(PATH_ENV)
-
-
-
-
 folder_path = "/Users/martinjurado/Documents/prj/data_challenge/raw_data/"
 
 #Database Connection method
@@ -32,7 +28,7 @@ def db_connection(query,insert = False):
     
         cursor.execute(query)
         if insert == True:
-            record = "Datos Insertados"
+            record = "Inserted data"
         else:
             record = cursor.fetchall()        
         connection.commit()
@@ -73,7 +69,7 @@ def new_data_insert(file_name):
         df = df.replace(np.nan, 'null', regex=True)
         #Inserting only new data base id condition
         if len(rb)>0:
-            print("checar condicion")
+            print("Applying conditions")
             db_last_id = rb[0][0]
             csv_last_id = df[df.columns[0]].iloc[-1]
             if csv_last_id > db_last_id:
@@ -83,7 +79,7 @@ def new_data_insert(file_name):
                     query_dep_insert=f"""INSERT INTO hired_employees.departments (departments) VALUES ('{dep_name}')"""
                     db_connection(query_dep_insert,True)
             else:
-                print("error in the file")
+                print("Error in the file")
 
         else:
             
@@ -100,7 +96,7 @@ def new_data_insert(file_name):
         df = df.replace(np.nan, 'null', regex=True)
         #Inserting only new data base id condition
         if len(rb)>0:
-            print("checar condicion")
+            print("Applying conditions")
             db_last_id = rb[0][0]
             csv_last_id = df[df.columns[0]].iloc[-1]
             if csv_last_id > db_last_id:
@@ -110,7 +106,7 @@ def new_data_insert(file_name):
                     query_job_insert=f"""INSERT INTO hired_employees.jobs (job) VALUES ('{job_name}')"""
                     db_connection(query_job_insert,True)
             else:
-                print("error in the file")
+                print("Error in the file")
         else:
             
             for index, row in df.iterrows():
@@ -126,7 +122,7 @@ def new_data_insert(file_name):
         df = df.replace(np.nan, 'null', regex=True)
         #Inserting only new data base id condition
         if len(rb)>0:
-            print("checar condicion")
+            print("Applying conditions")
             db_last_id = rb[0][0]
             csv_last_id = df[df.columns[0]].iloc[-1]
             if csv_last_id > db_last_id:
@@ -154,7 +150,7 @@ def new_data_insert(file_name):
                 db_connection(query_job_insert,True)
     
     else:
-        print("Archiv no clasificado")
+        print("Unclassified file")
 
 #Data Status
 def data_status(path):
@@ -168,9 +164,9 @@ def data_status(path):
         print(file_name_exists, len(file_name_exists))
 
         if len(file_name_exists) > 0:
-            print("Buscas condiciones")
+            print("Applying conditions")
             if file_size != file_name_exists[0][2]:
-                print("Cambio el archivo de tamaño")
+                print("The file resized")
                 new_data_insert(file_name)
                 find_id_query=f"SELECT id from ingest_status.ingest_status where file_name = '{file_name}'"
                 id_changed = db_connection(find_id_query)[0][0]
@@ -178,7 +174,7 @@ def data_status(path):
                 update_status = db_connection(up_query,True)
 
             else:
-                print("No cambio nada")    
+                print("There were no changes")    
                 
 
         else:
@@ -186,11 +182,6 @@ def data_status(path):
             insert_data = f"INSERT INTO ingest_status.ingest_status (file_name, file_size, last_id) VALUES ('{file_name}',{file_size},{last_id})"
             db_connection(insert_data,True)
             print("inserto todo")
-
-
-
-    
-
 
       
 #Main function

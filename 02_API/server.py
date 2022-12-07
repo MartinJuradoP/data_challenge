@@ -4,8 +4,11 @@ import psycopg2
 from psycopg2 import Error
 from dotenv import load_dotenv
 import os
+import pandas as pd
+from sqlalchemy import create_engine
 
-PATH_ENV= '/Users/martinjurado/Documents/prj/data_challenge/01_csv_db/.env_db'
+PATH_ENV= '/Users/martinjurado/Documents/prj/data_challenge/02_API/.env_db'
+#PATH_ENV='/home/prj/.env_db'
 load_dotenv(PATH_ENV)
 
 #Database Connection method
@@ -21,7 +24,7 @@ def db_connection(query,insert = False):
     
         cursor.execute(query)
         if insert == True:
-            record = "Datos Insertados"
+            record = "Data iserted"
         else:
             record = cursor.fetchall()        
         connection.commit()
@@ -36,48 +39,74 @@ def db_connection(query,insert = False):
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def home():
     return "<p>Server is alive !!!</p>"
 
-"""Post body format to insert new data {
-"dep":"New Dep"}"""
 
 
-@app.route("/api/deparments", methods=["GET", "POST","PUT","DELETE"])
-def data_deparments():
+
+@app.route("/api/departments", methods=["GET", "POST","PUT","DELETE"])
+def data_departments():
     
     if request.method == 'POST':
         data = json.loads(request.data)
-        dep_name = data["dep"]
-        print(dep_name)
-        find_id_query=f"SELECT id from hired_employees.departments where departments = '{dep_name}'"
-        rb = db_connection(find_id_query)
-        if len(rb)==0:
-            query_dep_insert=f"""INSERT INTO hired_employees.departments (departments) VALUES ('{dep_name}')"""
-            db_connection(query_dep_insert,True)
-        else:
-            print("The data is saved")
+        try:
+        
+            data = data['data']
+            
+            for d in data:
+                dep_name= d["departments"]
+                find_id_query=f"SELECT id from hired_employees.departments where departments = '{dep_name}'"
+                rb = db_connection(find_id_query)
+                if len(rb)==0:
+                    query_dep_insert=f"""INSERT INTO hired_employees.departments (departments) VALUES ('{dep_name}')"""
+                    db_connection(query_dep_insert,True)
+                else:
+                    print("The data is saved")
+        except:
+
+            return {"Error":"Data  does not have the required format"}
         
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
         data = json.loads(request.data)
-        dep_id = int(data["id"])
-        dep_name = data["dep"]
-        up_query=f"UPDATE hired_employees.departments SET departments = '{dep_name}' WHERE id = {dep_id}"
-        update_status = db_connection(up_query,True)
+        
+        try:
+            data = data['data']
+            for d in data:
+                dep_id = int(d["id"])
+                dep_name = d["departments"]
+                up_query=f"UPDATE hired_employees.departments SET departments = '{dep_name}' WHERE id = {dep_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
+
+
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
         data = json.loads(request.data)
-        dep_id = int(data["id"])
-        up_query=f"DELETE FROM hired_employees.departments WHERE id = {dep_id}"
-        update_status = db_connection(up_query,True)
-
+        try:
+            data = data['data']
+            for d in data:
+                dep_id = int(d["id"])
+                up_query=f"DELETE FROM hired_employees.departments WHERE id = {dep_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
 
         return {"Task":"Deleted"}
+
+    elif request.method == 'GET':
+       
+        
+        up_query=f"SELECT * FROM hired_employees.departments"
+        data = db_connection(up_query)
+
+
+        return data
 
     else:
         return {"Task":"No"}
@@ -86,35 +115,59 @@ def data_deparments():
 def data_jobs():
     
     if request.method == 'POST':
-        data = json.loads(request.data)
-        job_name = data["job"]
         
-        find_id_query=f"SELECT id from hired_employees.jobs where job = '{job_name}'"
-        rb = db_connection(find_id_query)
-        if len(rb)== 0:
-            query_dep_insert=f"""INSERT INTO hired_employees.jobs (job) VALUES ('{job_name}')"""
-            db_connection(query_dep_insert,True)
-        else:
-            print("The data is saved")
+        data = json.loads(request.data)
+        try:
+            data = data['data']
+            for d in data:
+                job_name= d["job"]
+                find_id_query=f"SELECT id from hired_employees.jobs where job = '{job_name}'"
+                rb = db_connection(find_id_query)
+                if len(rb)== 0:
+                    query_dep_insert=f"""INSERT INTO hired_employees.jobs (job) VALUES ('{job_name}')"""
+                    db_connection(query_dep_insert,True)
+                else:
+                    print("The data is saved")
+        except:
+            return {"Error":"Data  does not have the required format"}
         
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
         data = json.loads(request.data)
-        job_id = int(data["id"])
-        job_name = data["job"]
-        up_query=f"UPDATE hired_employees.jobs SET job = '{job_name}' WHERE id = {job_id}"
-        update_status = db_connection(up_query,True)
+        try:
+            data = data["data"]
+            for d in data:
+                job_id = int(d["id"])
+                job_name = d["job"]
+                up_query=f"UPDATE hired_employees.jobs SET job = '{job_name}' WHERE id = {job_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
+
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
         data = json.loads(request.data)
-        dep_id = int(data["id"])
-        up_query=f"DELETE FROM hired_employees.jobs WHERE id = {dep_id}"
-        update_status = db_connection(up_query,True)
-
+        try:
+            data = data["data"]        
+            for d in data:
+                dep_id = int(d["id"])
+                up_query=f"DELETE FROM hired_employees.jobs WHERE id = {dep_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
 
         return {"Task":"Deleted"}
+
+    elif request.method == 'GET':
+       
+        
+        up_query=f"SELECT * FROM hired_employees.jobs"
+        data = db_connection(up_query)
+
+
+        return data
 
 
 
@@ -127,47 +180,71 @@ def data_employees():
     
     if request.method == 'POST':
         data = json.loads(request.data)
-        empl_named= data["emp"]
-        hir_date=data["date"]
-        dep_id=int(data["deb_id"])
-        job_id=int(data["job_id"])
+        try:
+            data = data['data']
+            for d in data:
+                empl_named= d["employee_name"]
+                hir_date=d["hired_date"]
+                dep_id=int(d["department_id"])
+                job_id=int(d["job_id"])
 
-        find_id_query=f"SELECT id from hired_employees.hired_employees where employee_name = '{empl_named}'"
-        rb = db_connection(find_id_query)
-        if len(rb)== 0:
-            query_employee_insert=f"INSERT INTO hired_employees.hired_employees (employee_name,hired_date,department_id,job_id) VALUES ('{empl_named}','{hir_date}',{dep_id},{job_id})"
-            db_connection(query_employee_insert,True)
-        else:
-            print("The data is saved")
-        
+                find_id_query=f"SELECT id from hired_employees.hired_employees where employee_name = '{empl_named}'"
+                rb = db_connection(find_id_query)
+                if len(rb)== 0:
+                    query_employee_insert=f"INSERT INTO hired_employees.hired_employees (employee_name,hired_date,department_id,job_id) VALUES ('{empl_named}','{hir_date}',{dep_id},{job_id})"
+                    db_connection(query_employee_insert,True)
+                else:
+                    print("The data is saved")
+        except:
+            return {"Error":"Data  does not have the required format"}
+
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
         data = json.loads(request.data)
-        empl_id = int(data["id"])
-        empl_named= data["emp"]
-        hir_date=data["date"]
-        dep_id=int(data["deb_id"])
-        job_id=int(data["job_id"])
-
-        up_query=f"UPDATE hired_employees.hired_employees SET employee_name = '{empl_named}', hired_date='{hir_date}',department_id ={dep_id}, job_id ={job_id} WHERE id = {empl_id}"
-        update_status = db_connection(up_query,True)
+        try:
+            data = data['data']
+            for d in data:
+                empl_id =int(d["id"])
+                empl_named= d["employee_name"]
+                hir_date=d["hired_date"]
+                dep_id=int(d["department_id"])
+                job_id=int(d["job_id"])
+                up_query=f"UPDATE hired_employees.hired_employees SET employee_name = '{empl_named}', hired_date='{hir_date}',department_id ={dep_id}, job_id ={job_id} WHERE id = {empl_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
         data = json.loads(request.data)
-        empl_id = data["id"]
-        up_query=f"DELETE FROM hired_employees.jobs WHERE id = {empl_id}"
-        update_status = db_connection(up_query,True)
-
+        try:
+            data = data['data']
+            for d in data:
+                empl_id=int(d['id'])
+                up_query=f"DELETE FROM hired_employees.hired_employees WHERE id = {empl_id}"
+                update_status = db_connection(up_query,True)
+        except:
+            return {"Error":"Data  does not have the required format"}
 
         return {"Task":"Deleted"}
+    elif request.method == 'GET':
+       
+        
+        up_query=f"SELECT * FROM hired_employees.hired_employees"
+        data = db_connection(up_query)
 
 
+        return data
 
 
     else:
         return {"Task":"No"}
 
+
+
+
+
+
 if __name__ == '__main__':
-    app.run(debug = True ,host = '0.0.0.0',port=8888)
+    app.run(debug = True ,host = '0.0.0.0',port=8887)
