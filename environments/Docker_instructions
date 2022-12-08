@@ -1,11 +1,15 @@
 #Running Postgres Container
 docker run --name postgresql -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=passw0rd -p 5433:5432 -v /Users/martinjurado/Documents/prj/data_challenge/environments/volume/data_db:/var/lib/postgresql/data -d postgres
-#Runging Airflow Environment by compose file
+#Running Airflow Environment by compose file
 docker compose up airflow-init
 docker-compose up
 #Cleaning Volumes
 docker-compose down --volumes --rmi all
 
-#Runngin API of flask by Dockerfile
- docker build -t flask_api .
- docker run --name api_flask -p 8887:8887 -v /Users/martinjurado/Documents/prj/data_challenge/02_API:/home/prj -d flask_api
+#Running API of flask by Dockerfile
+docker build -t flask_api .
+docker run --name api_flask -p 8887:8887 -v /Users/martinjurado/Documents/prj/data_challenge/02_API:/home/prj -d flask_api
+
+#Running Dashboarding Application 
+docker build -t dash_app .
+docker run --name dash_app -p 8501:8501 -v /Users/martinjurado/Documents/prj/data_challenge/04_extra:/home/prj -d dash_app
