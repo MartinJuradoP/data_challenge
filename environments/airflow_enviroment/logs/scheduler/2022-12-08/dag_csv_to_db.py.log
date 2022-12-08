@@ -3218,3 +3218,262 @@
 [2022-12-08T04:21:27.140+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:21:27.140+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-08T04:21:27.187+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:21:27.186+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
 [2022-12-08T04:21:27.220+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.438 seconds
+[2022-12-08T04:21:57.430+0000] {processor.py:153} INFO - Started process (PID=98008) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:21:57.434+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:21:57.437+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:21:57.436+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:21:57.831+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:21:57.879+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:21:57.878+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:21:57.921+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:21:57.921+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:21:57.947+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.523 seconds
+[2022-12-08T04:22:28.175+0000] {processor.py:153} INFO - Started process (PID=98057) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:28.178+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:22:28.183+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:28.182+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:28.506+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:28.571+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:28.570+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:22:28.625+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:28.625+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:22:28.669+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.503 seconds
+[2022-12-08T04:22:58.728+0000] {processor.py:153} INFO - Started process (PID=98089) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:58.730+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:22:58.731+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:58.731+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:59.004+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:22:59.058+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:59.057+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:22:59.099+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:22:59.099+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:22:59.129+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.405 seconds
+[2022-12-08T04:23:29.297+0000] {processor.py:153} INFO - Started process (PID=98121) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:23:29.298+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:23:29.300+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:23:29.300+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:23:29.639+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:23:29.667+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:23:29.666+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:23:29.711+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:23:29.711+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:23:29.743+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.485 seconds
+[2022-12-08T04:23:59.912+0000] {processor.py:153} INFO - Started process (PID=98167) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:23:59.914+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:23:59.915+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:23:59.915+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:24:00.185+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:24:00.224+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:24:00.224+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:24:00.256+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:24:00.256+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:24:00.278+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.371 seconds
+[2022-12-08T04:24:30.534+0000] {processor.py:153} INFO - Started process (PID=98200) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:24:30.538+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:24:30.543+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:24:30.542+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:24:31.280+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:24:31.378+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:24:31.373+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:24:31.467+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:24:31.467+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:24:31.534+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 1.007 seconds
+[2022-12-08T04:25:01.710+0000] {processor.py:153} INFO - Started process (PID=98231) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:01.712+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:25:01.714+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:01.714+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:02.001+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:02.041+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:02.040+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:25:02.071+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:02.071+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:25:02.091+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.386 seconds
+[2022-12-08T04:25:32.251+0000] {processor.py:153} INFO - Started process (PID=98273) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:32.253+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:25:32.255+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:32.255+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:32.607+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:25:32.655+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:32.654+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:25:32.691+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:25:32.691+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:25:32.715+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.468 seconds
+[2022-12-08T04:26:02.901+0000] {processor.py:153} INFO - Started process (PID=98309) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:02.902+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:26:02.904+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:02.904+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:03.161+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:03.198+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:03.198+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:26:03.226+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:03.226+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:26:03.248+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.353 seconds
+[2022-12-08T04:26:33.452+0000] {processor.py:153} INFO - Started process (PID=98341) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:33.454+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:26:33.456+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:33.456+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:33.723+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:26:33.761+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:33.761+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:26:33.792+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:26:33.792+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:26:33.821+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.373 seconds
+[2022-12-08T04:27:04.031+0000] {processor.py:153} INFO - Started process (PID=98388) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:04.034+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:27:04.037+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:04.036+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:04.370+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:04.414+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:04.413+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:27:04.452+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:04.451+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:27:04.483+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.458 seconds
+[2022-12-08T04:27:34.686+0000] {processor.py:153} INFO - Started process (PID=98421) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:34.688+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:27:34.690+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:34.690+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:34.949+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:27:34.987+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:34.985+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:27:35.015+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:27:35.015+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:27:35.037+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.356 seconds
+[2022-12-08T04:28:05.220+0000] {processor.py:153} INFO - Started process (PID=98467) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:05.222+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:28:05.224+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:05.224+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:05.505+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:05.560+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:05.559+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:28:05.603+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:05.603+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:28:05.630+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.415 seconds
+[2022-12-08T04:28:35.810+0000] {processor.py:153} INFO - Started process (PID=98500) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:35.812+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:28:35.814+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:35.814+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:36.113+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:28:36.159+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:36.158+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:28:36.197+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:28:36.197+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:28:36.221+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.417 seconds
+[2022-12-08T04:29:06.381+0000] {processor.py:153} INFO - Started process (PID=98531) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:06.384+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:29:06.386+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:06.386+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:06.691+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:06.731+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:06.731+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:29:06.761+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:06.761+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:29:06.783+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.407 seconds
+[2022-12-08T04:29:36.947+0000] {processor.py:153} INFO - Started process (PID=98576) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:36.949+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:29:36.950+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:36.950+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:37.249+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:29:37.286+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:37.285+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:29:37.315+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:29:37.315+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:29:38.841+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 1.900 seconds
+[2022-12-08T04:30:09.027+0000] {processor.py:153} INFO - Started process (PID=98618) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:09.029+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:30:09.031+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:09.031+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:09.352+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:09.405+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:09.404+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:30:09.451+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:09.451+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:30:09.478+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.456 seconds
+[2022-12-08T04:30:39.658+0000] {processor.py:153} INFO - Started process (PID=98654) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:39.661+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:30:39.662+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:39.662+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:40.029+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:30:40.083+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:40.083+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:30:40.131+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:30:40.130+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:30:40.164+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.510 seconds
+[2022-12-08T04:31:10.348+0000] {processor.py:153} INFO - Started process (PID=98685) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:10.349+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:31:10.351+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:10.351+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:10.659+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:10.708+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:10.706+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:31:10.747+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:10.747+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:31:10.778+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.437 seconds
+[2022-12-08T04:31:40.937+0000] {processor.py:153} INFO - Started process (PID=98731) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:40.939+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:31:40.941+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:40.941+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:41.253+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:31:41.304+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:41.303+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:31:41.340+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:31:41.340+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:31:41.364+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.432 seconds
+[2022-12-08T04:32:11.521+0000] {processor.py:153} INFO - Started process (PID=98763) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:11.524+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:32:11.527+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:11.526+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:11.824+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:11.867+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:11.866+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:32:11.900+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:11.900+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:32:11.923+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.407 seconds
+[2022-12-08T04:32:42.092+0000] {processor.py:153} INFO - Started process (PID=98811) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:42.095+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:32:42.097+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:42.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:42.489+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:32:42.541+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:42.540+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:32:42.583+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:32:42.583+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:32:42.614+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.527 seconds
+[2022-12-08T04:33:12.782+0000] {processor.py:153} INFO - Started process (PID=98842) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:12.784+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:33:12.785+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:12.785+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:13.122+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:13.168+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:13.167+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:33:13.204+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:13.204+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:33:13.228+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.451 seconds
+[2022-12-08T04:33:43.444+0000] {processor.py:153} INFO - Started process (PID=98874) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:43.450+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:33:43.455+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:43.454+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:44.281+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:33:44.392+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:44.390+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:33:44.482+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:33:44.481+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:33:44.551+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 1.119 seconds
+[2022-12-08T04:34:14.659+0000] {processor.py:153} INFO - Started process (PID=98907) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:14.661+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:34:14.663+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:14.663+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:14.920+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:14.964+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:14.963+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:34:14.995+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:14.995+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:34:15.015+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.361 seconds
+[2022-12-08T04:34:45.229+0000] {processor.py:153} INFO - Started process (PID=98953) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:45.235+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:34:45.239+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:45.238+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:45.796+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:34:45.894+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:45.893+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:34:45.955+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:34:45.955+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:34:45.991+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.771 seconds
+[2022-12-08T04:35:16.178+0000] {processor.py:153} INFO - Started process (PID=98985) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:16.180+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:35:16.184+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:16.183+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:16.557+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:16.609+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:16.608+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:35:16.647+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:16.647+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:35:16.674+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.501 seconds
+[2022-12-08T04:35:46.863+0000] {processor.py:153} INFO - Started process (PID=99018) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:46.866+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:35:46.868+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:46.868+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:47.140+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:35:47.184+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:47.183+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:35:47.222+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:35:47.222+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:35:47.249+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.390 seconds
+[2022-12-08T04:36:17.471+0000] {processor.py:153} INFO - Started process (PID=99063) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:17.473+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:36:17.475+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:17.475+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:17.760+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:17.799+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:17.798+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:36:17.831+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:17.831+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:36:18.039+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.572 seconds
+[2022-12-08T04:36:48.167+0000] {processor.py:153} INFO - Started process (PID=99095) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:48.169+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:36:48.171+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:48.171+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:48.513+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:36:48.566+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:48.565+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:36:48.604+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:36:48.603+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:36:48.631+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.468 seconds
+[2022-12-08T04:37:18.809+0000] {processor.py:153} INFO - Started process (PID=99141) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:18.811+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:37:18.812+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:18.812+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:19.144+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:19.184+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:19.183+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:37:19.216+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:19.215+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:37:19.246+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.442 seconds
+[2022-12-08T04:37:49.429+0000] {processor.py:153} INFO - Started process (PID=99173) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:49.431+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:37:49.433+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:49.433+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:49.749+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:37:49.799+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:49.799+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:37:49.833+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:37:49.833+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:37:49.860+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.436 seconds
+[2022-12-08T04:38:20.068+0000] {processor.py:153} INFO - Started process (PID=99203) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:20.071+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:38:20.074+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:20.073+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:20.453+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:20.493+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:20.492+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:38:20.524+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:20.524+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:38:20.545+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.482 seconds
+[2022-12-08T04:38:50.742+0000] {processor.py:153} INFO - Started process (PID=99248) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:50.746+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:38:50.747+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:50.747+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:51.030+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:38:51.074+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:51.073+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:38:51.109+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:38:51.109+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:38:51.135+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.397 seconds
+[2022-12-08T04:39:21.292+0000] {processor.py:153} INFO - Started process (PID=99279) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:21.295+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:39:21.296+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:21.296+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:21.589+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:21.633+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:21.633+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:39:21.669+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:21.669+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:39:21.699+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.411 seconds
+[2022-12-08T04:39:51.874+0000] {processor.py:153} INFO - Started process (PID=99324) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:51.877+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:39:51.878+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:51.878+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:52.247+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:39:52.291+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:52.290+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:39:52.485+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:39:52.485+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:39:52.518+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 0.649 seconds
+[2022-12-08T04:40:22.621+0000] {processor.py:153} INFO - Started process (PID=99356) to work on /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:40:22.627+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_csv_to_db.py for tasks to queue
+[2022-12-08T04:40:22.631+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:40:22.631+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:40:23.418+0000] {processor.py:753} INFO - DAG(s) dict_keys(['CSV_2_DB']) retrieved from /opt/airflow/dags/dag_csv_to_db.py
+[2022-12-08T04:40:23.518+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:40:23.516+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-08T04:40:23.591+0000] {logging_mixin.py:137} INFO - [2022-12-08T04:40:23.591+0000] {dag.py:3427} INFO - Setting next_dagrun for CSV_2_DB to 2022-12-08T04:00:00+00:00, run_after=2022-12-08T05:00:00+00:00
+[2022-12-08T04:40:23.653+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_csv_to_db.py took 1.046 seconds
