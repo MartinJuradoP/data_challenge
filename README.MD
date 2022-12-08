@@ -115,7 +115,7 @@ create table ingest_status.ingest_status
 ```
 Data base schema employees
 
-![Schema](data_challenge/database_schemas/hired_employees.png)
+![Alt text](./database_schemas/hired_employees.png 'schema')
 
 
 
@@ -351,8 +351,9 @@ with DAG(
 
     t1
 ```
+Dag visualization
 
-![Airflow](data_challenge/resources/airflow.png)
+![Alt text](./resources/airflow.png "airflow")
 
 
 
