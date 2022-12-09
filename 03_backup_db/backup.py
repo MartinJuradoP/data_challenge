@@ -82,7 +82,7 @@ def jobs_back_up(n=True):
                 schema_from_file = json.loads(metadata['avro.schema'])
                 data_jobs = [job for job in reader]
                 reader.close()
-                url="http://localhost:8887/api/massive/jobs"
+                url="http://localhost:8887/api/jobs"
                 paidload = {"data":data_jobs}
                 print(data_jobs)
                 try:

@@ -56,3 +56,22 @@ create table ingest_status.ingest_status
     file_size bigint,
     last_id   int
 );
+
+
+-- For the back-up is important to create a status table
+
+
+-- Schema creation
+create schema backup_status;
+
+-- Table  Creation
+
+create table backup_status.backup_status
+(
+    id        serial
+        constraint ingest_status_pk
+            primary key,
+    table_name text,
+    number_rows bigint,
+    last_id   bigint
+);

@@ -10,16 +10,16 @@ The challenge info is in the following link:
 
 Docker is used to run all the tasks in this challenge.
 
-To run the environments it is necessary to have docker installed and a computer with a capacity greater than (**8 GB**) in memory.
+To run the environments it is necessary to have docker installed and a computer with a capacity greater than **8 GB** in memory.
 
-For this we use three environments created to cover parts of the challenge in the folder (**./environments**)
+For this we use three environments created to cover parts of the challenge in the folder **./environments**
 
 The project structure has 8 folders, 4 for the challenges and 4 for supporting them.
 
 # Challenge No. 1
 
-### Move historic data from files in CSV format to the new database.
-For this challenge it is necessary to migrate csv files to a relational database, these files are located in the (**./raw_data**) folder.
+### 1.1 Move historic data from files in CSV format to the new database.
+For this challenge it is necessary to migrate csv files to a relational database, these files are located in the **./raw_data** folder.
 To address the problem it was decided to use the following technologies:
 - Python (Data processing).
 - Airflow (Task automation)
@@ -27,7 +27,7 @@ To address the problem it was decided to use the following technologies:
 
 It is necessary to run the following lines to create the environments.
 
-In the project folder:
+In the environment folder (**environments/airflow_enviroment/**):
 
 Airflow creation
 
@@ -110,6 +110,23 @@ create table ingest_status.ingest_status
     file_size bigint,
     last_id   int
 );
+-- For the back-up is important to create a status table
+
+
+-- Schema creation
+create schema backup_status;
+
+-- Table  Creation
+
+create table backup_status.backup_status
+(
+    id        serial
+        constraint ingest_status_pk
+            primary key,
+    table_name text,
+    number_rows bigint,
+    last_id   bigint
+);
 
 
 ```
@@ -117,245 +134,88 @@ Data base schema employees
 
 ![Alt text](./database_schemas/hired_employees.png 'schema')
 
+The primary function of the DAG is to automate the ingestion work, in which python is used to verify if the file sizes and ids change in order to update the database in postgrest. To correctly map the file ingest to the corresponding tables, each file is parsed with regular expressions.
 
-
-Airflow runs the following Dag:
-
-
-```python
-from datetime import datetime, timedelta, date
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-#Code Info
-import os
-import pandas as pd
-import numpy as np
-import psycopg2
-from psycopg2 import Error
-import re
-from dotenv import load_dotenv
-
-#Environment Variables
-PATH_ENV= '/opt/airflow/env/.env_db'
-folder_path = "/opt/airflow/code_data/"
-
-load_dotenv(PATH_ENV)
-
-############ Data migration code #########
-##########################################
-
-#Database Connection method
-def db_connection(query,insert = False):
-    try:
-        connection = psycopg2.connect(user=os.getenv('user'),
-                                    password=os.getenv('password'),
-                                    host=os.getenv('host'),
-                                    port=os.getenv('port'),
-                                    database=os.getenv('database'))
-
-        cursor = connection.cursor()
-    
-        cursor.execute(query)
-        if insert == True:
-            record = "Inserted data"
-        else:
-            record = cursor.fetchall()        
-        connection.commit()
-        cursor.close()
-        connection.close()
-        return record
-        
-
-    except (Exception, Error) as error:
-        print("Error while connecting to PostgreSQL", error)  
-
-
-#Files into the folder
-def list_dir(folder_path, traversed = [], results = []): 
-    dirs = os.listdir(folder_path)
-    if dirs:
-        for f in dirs:
-            new_dir = folder_path + f + '/'
-            if os.path.isdir(new_dir) and new_dir not in traversed:
-                traversed.append(new_dir)
-                list_dir(new_dir, traversed, results)
-            else:
-                results.append([new_dir[:-1], os.stat(new_dir[:-1])])  
-    return results
-
-
-#Data Update
-def new_data_insert(file_name):
-    reg_dep = bool(re.search('depar', file_name, re.IGNORECASE))
-    reg_job = bool(re.search('job', file_name, re.IGNORECASE))
-    reg_emp = bool(re.search('emplo', file_name, re.IGNORECASE))
-    print(reg_dep,reg_emp,reg_job)
-    if reg_dep == True:
-        query_dep ="select id from hired_employees.departments order by id desc limit 1"
-        rb =db_connection(query_dep)
-        df = pd.read_csv(file_name, header=None)
-            #Checking nan values and replace them by null
-        df = df.replace(np.nan, 'null', regex=True)
-        #Inserting only new data base id condition
-        if len(rb)>0:
-            print("Applying conditions")
-            db_last_id = rb[0][0]
-            csv_last_id = df[df.columns[0]].iloc[-1]
-            if csv_last_id > db_last_id:
-                df = df[(int(db_last_id)):]
-                for index, row in df.iterrows():
-                    dep_name=row[1] 
-                    query_dep_insert=f"""INSERT INTO hired_employees.departments (departments) VALUES ('{dep_name}')"""
-                    db_connection(query_dep_insert,True)
-            else:
-                print("Error in the file")
-
-        else:
-            
-            for index, row in df.iterrows():
-                dep_name=row[1] 
-                query_dep_insert=f"""INSERT INTO hired_employees.departments (departments) VALUES ('{dep_name}')"""
-                db_connection(query_dep_insert,True)
-        
-    elif reg_job == True:
-        query_job ="select id from hired_employees.jobs order by id desc limit 1"
-        rb =db_connection(query_job)
-        df = pd.read_csv(file_name, header=None)
-            #Checking nan values and replace them by null
-        df = df.replace(np.nan, 'null', regex=True)
-        #Inserting only new data base id condition
-        if len(rb)>0:
-            print("Applying conditions")
-            db_last_id = rb[0][0]
-            csv_last_id = df[df.columns[0]].iloc[-1]
-            if csv_last_id > db_last_id:
-                df = df[(int(db_last_id)):]
-                for index, row in df.iterrows():
-                    job_name=row[1] 
-                    query_job_insert=f"""INSERT INTO hired_employees.jobs (job) VALUES ('{job_name}')"""
-                    db_connection(query_job_insert,True)
-            else:
-                print("Error in the file")
-        else:
-            
-            for index, row in df.iterrows():
-                job_name=row[1] 
-                query_job_insert=f"""INSERT INTO hired_employees.jobs (job) VALUES ('{job_name}')"""
-                db_connection(query_job_insert,True)
-        
-    elif reg_emp == True:
-        query_emp ="select id from hired_employees.hired_employees order by id desc limit 1"
-        rb =db_connection(query_emp)
-        df = pd.read_csv(file_name, header=None)
-            #Checking nan values and replace them by null
-        df = df.replace(np.nan, 'null', regex=True)
-        #Inserting only new data base id condition
-        if len(rb)>0:
-            print("Applying conditions")
-            db_last_id = rb[0][0]
-            csv_last_id = df[df.columns[0]].iloc[-1]
-            if csv_last_id > db_last_id:
-                df = df[(int(db_last_id)):]
-                for index, row in df.iterrows():
-                    empl_name=row[1]
-                    empl_named = empl_name.replace("'", "''" )
-                    hir_date=row[2]
-                    dep_id=row[3]
-                    job_id=row[4]
-                    query_job_insert=f"INSERT INTO hired_employees.hired_employees (employee_name,hired_date,department_id,job_id) VALUES ('{empl_named}','{hir_date}',{dep_id},{job_id})"
-                    db_connection(query_job_insert,True)
-            else:
-                print("error in the file")
-            
-        else:
-            
-            for index, row in df.iterrows():
-                empl_name=row[1]
-                empl_named = empl_name.replace("'", "''" )
-                hir_date=row[2]
-                dep_id=row[3]
-                job_id=row[4]
-                query_job_insert=f"INSERT INTO hired_employees.hired_employees (employee_name,hired_date,department_id,job_id) VALUES ('{empl_named}','{hir_date}',{dep_id},{job_id})"
-                db_connection(query_job_insert,True)
-    
-    else:
-        print("Unclassified file")
-
-#Data Status
-def data_status(path):
-    for file_name, stat in list_dir(path):
-        df = pd.read_csv(file_name)
-        last_id = df[df.columns[0]].iloc[-1]
-        file_size= stat.st_size
- 
-        query_file =f"select * from ingest_status.ingest_status where file_name = '{file_name}' limit 1"
-        file_name_exists = db_connection(query_file)
-        print(file_name_exists, len(file_name_exists))
-
-        if len(file_name_exists) > 0:
-            print("Applying conditions")
-            if file_size != file_name_exists[0][2]:
-                print("The file resized")
-                new_data_insert(file_name)
-                find_id_query=f"SELECT id from ingest_status.ingest_status where file_name = '{file_name}'"
-                id_changed = db_connection(find_id_query)[0][0]
-                up_query=f"UPDATE ingest_status.ingest_status SET file_size = {file_size},last_id= {last_id} WHERE id = {id_changed}"
-                update_status = db_connection(up_query,True)
-
-            else:
-                print("There were no changes")    
-                
-
-        else:
-            new_data_insert(file_name)
-            insert_data = f"INSERT INTO ingest_status.ingest_status (file_name, file_size, last_id) VALUES ('{file_name}',{file_size},{last_id})"
-            db_connection(insert_data,True)
-            print("inserto todo")
-
-      
-#Main function
-
-
-####### Dag Configuration ################
-##########################################
-default_args = {
-
-    'owner':'Martin_Jurado',
-    'retries':5,
-    'retry_delay':timedelta(minutes=2)
-
-}
-
-
-with DAG(
-
-    dag_id='CSV_2_DB',
-    default_args = default_args,
-    description = 'Archive DataBase Updating',
-    start_date= datetime(2022,11,5,9),
-    schedule_interval = "@hourly",
-    catchup=False
-
-
-) as dag:
-
-
-    t1 = PythonOperator(
-
-        task_id='First_task_update',
-        python_callable=data_status,
-        op_kwargs={'path':folder_path},
-    )
-    
-    
-
-    t1
-```
 Dag visualization
 
 ![Alt text](./resources/airflow.png "airflow")
 
+**The code informations is allocated the foldero ./01_csv_db**
 
+### 1.2 Create a Rest API to receive new data.
+
+The API structure is based on python using the postgres database from the first point of this challenge.
+
+- The flask framework is used to create the REST API.
+
+This time a Dockerfile is used to create the configurations of the container image.
+
+environment location: **./environments/python_enviroment**
+
+Flask Environment
+
+```console
+
+user@machine data_challenge % cd environments/python_enviroment
+
+user@machine data_challenge % docker build -t flask_api .
+
+user@machine data_challenge % docker run --name api_flask -p 8887:8887 -v /Users/martinjurado/Documents/prj/data_challenge/02_API:/home/prj -d flask_api
+
+
+```
+
+For the API, CRUD is used, where each of the end-points has the function of Create (Post), Read (GET), Update (PUT) and Delete (DELETE).
+
+- http://localhost:8887/api/jobs
+- http://localhost:8887/api/departments
+- http://localhost:8887/api/employees
+
+
+
+**The code informations is allocated the foldero ./02_API**
+
+### 1.3 Create a feature to backup for each table and save it in the file system in AVRO format.
+
+
+For this part of the task, python was used, which is in charge of connecting to the database, extracting the information from the table and saving each of the data in a structured way. In this case, only the back-up of the jobs table was performed.
+
+### 1.4 Create a feature to restore a certain table with its backup.
+
+For this task, the file generated in the backup is used, and the DAG in airflow to ingest the data in a massive way by the API created in task 1.2. 
+"Since you have the same schema in the structure, only the file was loaded"
+
+# Challenge No. 2
+
+You need to explore the data that was inserted in the first challenge. The stakeholders ask for
+some specific metrics they need. You should create an end-point for each requirement.
+
+For this challenge, the API was used, but first the appropriate queries were designed to obtain the information, which are found in the following location: **./02_API**
+
+2.1: **./02_API/query_2021_quarter.sql**
+
+http://localhost:8887/api/2021/quarters
+
+
+2.2: **./02_API/query_2021_deparments.sql**
+
+http://localhost:8887/api/2021/departments
+
+
+In the same way, to be able to visualize them, a small application was created in python to access it, it is necessary to run the following.
+
+Flask Environment
+
+```console
+
+user@machine data_challenge % cd /environments/python_enviroment_dash
+
+user@machine data_challenge % docker build -t dash_app .
+
+user@machine data_challenge % docker run --name dash_app -p 8501:8501 -v /Users/martinjurado/Documents/prj/data_challenge/04_extra:/home/prj -d dash_app
+
+
+```
 
 
 

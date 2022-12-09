@@ -9,8 +9,8 @@ from sqlalchemy import create_engine
 
 
 
-PATH_ENV= '/Users/martinjurado/Documents/prj/data_challenge/02_API/.env_db'
-#PATH_ENV='/home/prj/.env_db'
+#PATH_ENV= '/Users/martinjurado/Documents/prj/data_challenge/02_API/.env_db'
+PATH_ENV='/home/prj/.env_db'
 load_dotenv(PATH_ENV)
 
 #Database Connection method
