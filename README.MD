@@ -194,17 +194,17 @@ For this challenge, the API was used, but first the appropriate queries were des
 
 2.1: **./02_API/query_2021_quarter.sql**
 
-http://localhost:8887/api/2021/quarters
+- http://localhost:8887/api/2021/quarters
 
 
 2.2: **./02_API/query_2021_deparments.sql**
 
-http://localhost:8887/api/2021/departments
+- http://localhost:8887/api/2021/departments
 
 
 In the same way, to be able to visualize them, a small application was created in python to access it, it is necessary to run the following.
 
-Flask Environment
+Streamlit Environment
 
 ```console
 
@@ -217,6 +217,7 @@ user@machine data_challenge % docker run --name dash_app -p 8501:8501 -v /Users/
 
 ```
 
+- http://localhost:8501
 
 
 
