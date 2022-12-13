@@ -70,8 +70,8 @@ def data_departments():
 
             return {"Error":"Data  does not have the required format"}
         
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(query_dep_insert)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(query_dep_insert)
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
@@ -87,8 +87,8 @@ def data_departments():
         except:
             return {"Error":"Data  does not have the required format"}
 
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(up_query)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(up_query)
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
@@ -101,8 +101,8 @@ def data_departments():
                 update_status = db_connection(up_query,True)
         except:
             return {"Error":"Data  does not have the required format"}
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(update_status)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(update_status)
         return {"Task":"Deleted"}
 
     elif request.method == 'GET':
@@ -141,8 +141,8 @@ def data_jobs():
                     print("The data is saved")
         except:
             return {"Error":"Data  does not have the required format"}
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(query_dep_insert)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(query_dep_insert)
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
@@ -156,8 +156,8 @@ def data_jobs():
                 update_status = db_connection(up_query,True)
         except:
             return {"Error":"Data  does not have the required format"}
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(up_query)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(up_query)
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
@@ -170,8 +170,8 @@ def data_jobs():
                 update_status = db_connection(up_query,True)
         except:
             return {"Error":"Data  does not have the required format"}
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(up_query)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(up_query)
         return {"Task":"Deleted"}
 
        
@@ -212,8 +212,8 @@ def data_employees():
         except:
             return {"Error":"Data  does not have the required format"}
         
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(query_employee_insert)        
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(query_employee_insert)        
         return {"Task":"Inserted"}
 
     elif request.method == 'PUT':
@@ -231,8 +231,8 @@ def data_employees():
         except:
             return {"Error":"Data  does not have the required format"}
 
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(up_query)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(up_query)
         return {"Task":"Updted"}
 
     elif request.method == 'DELETE':
@@ -245,8 +245,8 @@ def data_employees():
                 update_status = db_connection(up_query,True)
         except:
             return {"Error":"Data  does not have the required format"}
-        logging.basicConfig(format='%(asctime)s %(message)s')
-        logging.warning(up_query)
+        #logging.basicConfig(format='%(asctime)s %(message)s')
+        #logging.warning(up_query)
         return {"Task":"Deleted"}
     elif request.method == 'GET':
        

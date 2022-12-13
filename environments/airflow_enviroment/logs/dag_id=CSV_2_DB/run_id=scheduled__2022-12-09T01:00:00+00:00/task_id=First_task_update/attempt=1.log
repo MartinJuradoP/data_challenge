@@ -1,0 +1,35 @@
+[2022-12-09T02:09:18.984+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: CSV_2_DB.First_task_update scheduled__2022-12-09T01:00:00+00:00 [queued]>
+[2022-12-09T02:09:19.125+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: CSV_2_DB.First_task_update scheduled__2022-12-09T01:00:00+00:00 [queued]>
+[2022-12-09T02:09:19.132+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-09T02:09:19.137+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 6
+[2022-12-09T02:09:19.141+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-09T02:09:19.640+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): First_task_update> on 2022-12-09 01:00:00+00:00
+[2022-12-09T02:09:19.814+0000] {standard_task_runner.py:55} INFO - Started process 13985 to run task
+[2022-12-09T02:09:19.989+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'CSV_2_DB', 'First_task_update', 'scheduled__2022-12-09T01:00:00+00:00', '--job-id', '47', '--raw', '--subdir', 'DAGS_FOLDER/dag_csv_to_db.py', '--cfg-path', '/tmp/tmpqsfbxpqo']
+[2022-12-09T02:09:20.014+0000] {standard_task_runner.py:83} INFO - Job 47: Subtask First_task_update
+[2022-12-09T02:09:21.277+0000] {task_command.py:389} INFO - Running <TaskInstance: CSV_2_DB.First_task_update scheduled__2022-12-09T01:00:00+00:00 [running]> on host c4fdd5f7672d
+[2022-12-09T02:09:23.016+0000] {taskinstance.py:1081} INFO - Dependencies not met for <TaskInstance: CSV_2_DB.First_task_update scheduled__2022-12-09T01:00:00+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2022-12-09T02:09:23.034+0000] {taskinstance.py:1081} INFO - Dependencies not met for <TaskInstance: CSV_2_DB.First_task_update scheduled__2022-12-09T01:00:00+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2022-12-09T02:09:23.049+0000] {local_task_job.py:98} INFO - Task is not able to be run
+[2022-12-09T02:09:23.215+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Martin_Jurado
+AIRFLOW_CTX_DAG_ID=CSV_2_DB
+AIRFLOW_CTX_TASK_ID=First_task_update
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-09T01:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-09T01:00:00+00:00
+[2022-12-09T02:09:23.639+0000] {logging_mixin.py:137} INFO - [(1, '/opt/***/code_data/departments.csv', 193, 12)] 1
+[2022-12-09T02:09:23.651+0000] {logging_mixin.py:137} INFO - Applying conditions
+[2022-12-09T02:09:23.656+0000] {logging_mixin.py:137} INFO - There were no changes
+[2022-12-09T02:09:23.942+0000] {logging_mixin.py:137} INFO - [(2, '/opt/***/code_data/jobs.csv', 4425, 183)] 1
+[2022-12-09T02:09:23.953+0000] {logging_mixin.py:137} INFO - Applying conditions
+[2022-12-09T02:09:23.958+0000] {logging_mixin.py:137} INFO - There were no changes
+[2022-12-09T02:09:24.365+0000] {logging_mixin.py:137} INFO - [(3, '/opt/***/code_data/z_hired_employees.csv', 92935, 1999)] 1
+[2022-12-09T02:09:24.376+0000] {logging_mixin.py:137} INFO - Applying conditions
+[2022-12-09T02:09:24.384+0000] {logging_mixin.py:137} INFO - There were no changes
+[2022-12-09T02:09:24.408+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-09T02:09:24.647+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=CSV_2_DB, task_id=First_task_update, execution_date=20221209T010000, start_date=20221209T020919, end_date=20221209T020924
+[2022-12-09T02:09:25.543+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-09T02:09:25.826+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
