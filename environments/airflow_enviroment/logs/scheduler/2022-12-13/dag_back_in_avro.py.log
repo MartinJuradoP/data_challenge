@@ -351,3 +351,17 @@
 [2022-12-13T00:58:24.244+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:58:24.243+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-13T00:58:24.378+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:58:24.378+0000] {dag.py:3427} INFO - Setting next_dagrun for back_in_avro to 2022-12-13T00:00:00+00:00, run_after=2022-12-13T01:00:00+00:00
 [2022-12-13T00:58:24.479+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_back_in_avro.py took 5.918 seconds
+[2022-12-13T00:58:54.978+0000] {processor.py:153} INFO - Started process (PID=40910) to work on /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:58:54.984+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_back_in_avro.py for tasks to queue
+[2022-12-13T00:58:54.989+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:58:54.988+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:58:55.817+0000] {processor.py:753} INFO - DAG(s) dict_keys(['back_in_avro']) retrieved from /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:58:55.879+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:58:55.878+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-13T00:58:55.915+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:58:55.915+0000] {dag.py:3427} INFO - Setting next_dagrun for back_in_avro to 2022-12-13T00:00:00+00:00, run_after=2022-12-13T01:00:00+00:00
+[2022-12-13T00:58:55.952+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_back_in_avro.py took 0.987 seconds
+[2022-12-13T00:59:26.167+0000] {processor.py:153} INFO - Started process (PID=40945) to work on /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:59:26.169+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/dag_back_in_avro.py for tasks to queue
+[2022-12-13T00:59:26.172+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:59:26.172+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:59:26.647+0000] {processor.py:753} INFO - DAG(s) dict_keys(['back_in_avro']) retrieved from /opt/airflow/dags/dag_back_in_avro.py
+[2022-12-13T00:59:26.686+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:59:26.685+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-13T00:59:26.718+0000] {logging_mixin.py:137} INFO - [2022-12-13T00:59:26.717+0000] {dag.py:3427} INFO - Setting next_dagrun for back_in_avro to 2022-12-13T00:00:00+00:00, run_after=2022-12-13T01:00:00+00:00
+[2022-12-13T00:59:26.745+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/dag_back_in_avro.py took 0.582 seconds
